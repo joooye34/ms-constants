@@ -1,0 +1,25 @@
+{
+  "name": "ms-constants",
+  "version": "1.0.0",
+  "description": "Semantic enumeration values in milliseconds.",
+  "main": "index.js",
+  "module": "index.es.js",
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:es",
+    "build:cjs": "tsc index.ts",
+    "build:es": "tsc index.ts --outDir es && mv es/index.js index.es.js"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  },
+  "keywords": [
+    "milliseconds",
+    "constants"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:suyu34/ms-constants.git"
+  },
+  "author": "suyu34 <joooye1991@gmail.com>",
+  "license": "MIT"
+}
