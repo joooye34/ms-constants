@@ -1,13 +1,18 @@
 {
   "name": "ms-constants",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Semantic enumeration values in milliseconds.",
   "main": "index.js",
   "module": "index.es.js",
+  "files": [
+    "index.js",
+    "index.es.js",
+    "index.ts"
+  ],
   "scripts": {
     "build": "npm run build:cjs && npm run build:es",
     "build:cjs": "tsc index.ts",
-    "build:es": "tsc index.ts --outDir es && mv es/index.js index.es.js"
+    "build:es": "tsc index.ts -m esnext --outDir es && mv es/index.js index.es.js"
   },
   "devDependencies": {
     "typescript": "^4.5.4"
